@@ -215,6 +215,18 @@ p {
   box-shadow: var(--shadow-lg);
 }
 
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold);
+  color: white;
+  transform: translateY(-2px);
+}
+
 .btn-outline {
   background: transparent;
   color: var(--primary);
