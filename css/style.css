@@ -528,7 +528,7 @@ p {
   justify-content: center;
   background: linear-gradient(135deg, #2D2D2D 0%, #3D3D3D 50%, #4A4A4A 100%);
   overflow: hidden;
-  padding: 2rem 0;
+  padding: 0.5rem 0;
 }
 
 .hero > .container {
@@ -563,7 +563,7 @@ p {
   max-width: 550px;
   width: 100%;
   height: auto;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.5rem;
 }
 
 .hero-content {
