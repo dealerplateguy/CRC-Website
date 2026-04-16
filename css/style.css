@@ -863,7 +863,7 @@ p {
 }
 
 .estimates-content p {
-  color: rgba(255,255,255,0.9);
+  color: #FFFFFF;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
@@ -887,7 +887,7 @@ p {
 .estimate-feature svg {
   width: 20px;
   height: 20px;
-  color: var(--gold);
+  color: #FFFFFF;
   flex-shrink: 0;
 }
 
