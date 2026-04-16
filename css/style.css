@@ -286,6 +286,22 @@ p {
   gap: 1.5rem;
 }
 
+.top-bar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.top-bar-badge svg {
+  stroke: var(--gold);
+  flex-shrink: 0;
+}
+
 .top-bar-right {
   display: flex;
   align-items: center;
