@@ -494,11 +494,17 @@ p {
 /* --- Hero Section --- */
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: calc(100vh - var(--header-height) - 36px);
   display: flex;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, #2D2D2D 0%, #3D3D3D 50%, #4A4A4A 100%);
   overflow: hidden;
+  padding: 5rem 0;
+}
+
+.hero > .container {
+  width: 100%;
 }
 
 .hero::before {
@@ -598,7 +604,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  .hero { min-height: 80vh; }
+  .hero { min-height: auto; padding: 3rem 0; }
   .hero-stats { gap: 1.5rem; }
   .hero-stat .number { font-size: 1.5rem; }
   .hero-ctas { flex-direction: column; }
