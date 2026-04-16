@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo & Video Checklist — Bob Rohrman Collision Repair Website</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #1a1a1a;
+      padding: 0.5in 0.6in;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .no-print { display: none !important; }
+      @page { margin: 0.5in 0.6in; size: letter; }
+      .page-break { page-break-before: always; }
+      .section { page-break-inside: avoid; }
+    }
+
+    .no-print {
+      background: #E8912D;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+    }
+    .no-print:hover { background: #d17f25; }
+
+    .header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid #E8912D;
+    }
+    .header h1 {
+      font-size: 20pt;
+      font-weight: 700;
+      color: #2D2D2D;
+      margin-bottom: 0.25rem;
+    }
+    .header p {
+      color: #666;
+      font-size: 10pt;
+    }
+
+    .priority-label {
+      display: inline-block;
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .priority-critical { background: #dc2626; color: white; }
+    .priority-high { background: #E8912D; color: white; }
+    .priority-nice { background: #64748b; color: white; }
+
+    .section {
+      margin-bottom: 1.25rem;
+    }
+    .section h2 {
+      font-size: 13pt;
+      font-weight: 700;
+      color: #2D2D2D;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+    .section h3 {
+      font-size: 10.5pt;
+      font-weight: 600;
+      color: #475569;
+      margin: 0.75rem 0 0.35rem;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+    .checklist li {
+      padding: 4px 0 4px 28px;
+      position: relative;
+      font-size: 10pt;
+      line-height: 1.45;
+    }
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #94a3b8;
+      border-radius: 2px;
+    }
+    .checklist li .detail {
+      color: #64748b;
+      font-size: 9pt;
+      display: block;
+    }
+
+    .count-box {
+      display: inline-block;
+      background: #f1f5f9;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #475569;
+      margin-left: 4px;
+    }
+
+    .tip-box {
+      background: #fef9f0;
+      border-left: 3px solid #E8912D;
+      padding: 8px 12px;
+      margin: 0.75rem 0;
+      font-size: 9.5pt;
+      color: #78350f;
+    }
+    .tip-box strong { color: #E8912D; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 1.5rem;
+    }
+
+    .notes-section {
+      margin-top: 1rem;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px;
+    }
+    .notes-section h3 {
+      font-size: 10pt;
+      margin-bottom: 0.5rem;
+      color: #2D2D2D;
+    }
+    .notes-lines {
+      border-top: 1px solid #e2e8f0;
+      height: 100px;
+    }
+
+    .footer-bar {
+      margin-top: 1.25rem;
+      padding-top: 0.75rem;
+      border-top: 2px solid #2D2D2D;
+      font-size: 8.5pt;
+      color: #94a3b8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<button class="no-print" onclick="window.print()">Print This Checklist (Ctrl/Cmd + P)</button>
+
+<div class="header">
+  <h1>Photo &amp; Video Checklist</h1>
+  <p>Bob Rohrman Collision Repair Center Website &mdash; Content Needed for SEO Optimization</p>
+</div>
+
+<!-- ===== SECTION 1: BEFORE & AFTER ===== -->
+<div class="section">
+  <h2>1. Before &amp; After Repair Photos <span class="priority-label priority-critical">Must Have</span> <span class="count-box">10-15 sets</span></h2>
+  <p style="font-size: 9.5pt; color: #64748b; margin-bottom: 0.5rem;">Shoot both photos from the SAME angle, distance, and lighting. Landscape orientation (horizontal).</p>
+  <div class="two-col">
+    <ul class="checklist">
+      <li>Front-end collision repair (before + after) <span class="detail">Hood, bumper, fender damage</span></li>
+      <li>Rear bumper repair (before + after) <span class="detail">Dents, cracks, paint damage</span></li>
+      <li>Side panel / door damage (before + after) <span class="detail">Creases, dents, scratches</span></li>
+      <li>Hail damage PDR results (before + after) <span class="detail">Show multiple dents removed</span></li>
+      <li>Frame damage repair (before + after) <span class="detail">Structural damage restored</span></li>
+    </ul>
+    <ul class="checklist">
+      <li>Deep scratch / paint repair (before + after) <span class="detail">Key scratches, scuffs</span></li>
+      <li>Full paint / refinishing job (before + after) <span class="detail">Color match, clear coat</span></li>
+      <li>Glass replacement (before + after) <span class="detail">Cracked windshield to new</span></li>
+      <li>Fender bender repair (before + after) <span class="detail">Minor collision damage</span></li>
+      <li>Bumper sensor / camera area (before + after) <span class="detail">Tech + cosmetic repair</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== SECTION 2: FACILITY ===== -->
+<div class="section">
+  <h2>2. Facility Photos <span class="priority-label priority-critical">Must Have</span> <span class="count-box">8-10 photos</span></h2>
+  <div class="two-col">
+    <ul class="checklist">
+      <li>Building exterior with signage visible <span class="detail">Wide shot, good lighting, sign legible</span></li>
+      <li>Main shop floor / repair bays <span class="detail">Show scale and professionalism</span></li>
+      <li>Paint booth (exterior and interior) <span class="detail">Clean, well-lit shot</span></li>
+      <li>Frame straightening equipment <span class="detail">Vehicle mounted if possible</span></li>
+    </ul>
+    <ul class="checklist">
+      <li>Computerized measuring system <span class="detail">Screen visible if possible</span></li>
+      <li>Customer waiting area / lounge <span class="detail">Show comfort and cleanliness</span></li>
+      <li>Front desk / check-in area <span class="detail">Welcoming first impression</span></li>
+      <li>Parking lot / vehicle intake area <span class="detail">Shows accessibility</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== SECTION 3: TEAM ===== -->
+<div class="section">
+  <h2>3. Team Photos <span class="priority-label priority-critical">Must Have</span> <span class="count-box">6-10 photos</span></h2>
+  <div class="two-col">
+    <ul class="checklist">
+      <li>Full team group photo <span class="detail">Everyone together, matching shirts if possible</span></li>
+      <li>Individual headshot — Manager/Owner <span class="detail">Professional, shoulders up</span></li>
+      <li>Individual headshots — Lead Technicians <span class="detail">Name + role for each person</span></li>
+      <li>Individual headshots — Estimators/Advisors <span class="detail">Name + role for each person</span></li>
+    </ul>
+    <ul class="checklist">
+      <li>Technician working on a vehicle (action shot) <span class="detail">Shows expertise in action</span></li>
+      <li>Estimator reviewing damage with customer <span class="detail">Shows customer care</span></li>
+      <li>I-CAR Gold certifications on the wall <span class="detail">Close-up of certificates/plaques</span></li>
+      <li>Team member using specialized equipment <span class="detail">PDR tools, spray gun, etc.</span></li>
+    </ul>
+  </div>
+  <div class="tip-box">
+    <strong>Tip:</strong> Get each person's full name, job title, and years of experience. This goes on the About page for E-E-A-T signals (Google's trust ranking factor).
+  </div>
+</div>
+
+<!-- ===== SECTION 4: EQUIPMENT ===== -->
+<div class="section">
+  <h2>4. Equipment Close-ups <span class="priority-label priority-high">High Priority</span> <span class="count-box">5-8 photos</span></h2>
+  <div class="two-col">
+    <ul class="checklist">
+      <li>Paint mixing / color matching station <span class="detail">Spectrophotometer, mixing cups</span></li>
+      <li>Spray gun in the paint booth <span class="detail">Action shot mid-spray if possible</span></li>
+      <li>PDR tools in action <span class="detail">Rods, lights, glue pulling</span></li>
+      <li>Frame rack with vehicle mounted <span class="detail">Shows serious capability</span></li>
+    </ul>
+    <ul class="checklist">
+      <li>ADAS calibration setup <span class="detail">Camera/sensor calibration targets</span></li>
+      <li>Welding / panel work in progress <span class="detail">Sparks look great in photos</span></li>
+      <li>Sanding / prep work <span class="detail">Shows attention to detail</span></li>
+      <li>Quality inspection / final check <span class="detail">Measuring, checking panel gaps</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ===== SECTION 5: CUSTOMER MOMENTS ===== -->
+<div class="section">
+  <h2>5. Customer Moments <span class="priority-label priority-nice">Nice to Have</span> <span class="count-box">3-5 photos</span></h2>
+  <ul class="checklist">
+    <li>Happy customer getting keys back at vehicle pickup <span class="detail">Get written permission to use their photo</span></li>
+    <li>Customer and estimator at the front desk <span class="detail">Shows welcoming experience</span></li>
+    <li>Vehicle being detailed / cleaned before delivery <span class="detail">Shows the finishing touch</span></li>
+  </ul>
+</div>
+
+<!-- ===== SECTION 6: VIDEOS ===== -->
+<div class="section">
+  <h2>6. Videos <span class="priority-label priority-critical">Must Have</span></h2>
+  <p style="font-size: 9.5pt; color: #64748b; margin-bottom: 0.5rem;">Shoot horizontal (landscape). Phone camera is fine. Upload to YouTube with descriptive titles including "Lafayette IN."</p>
+
+  <h3>Shop Tour Video <span class="count-box">60-90 sec</span></h3>
+  <ul class="checklist">
+    <li>Walk-through of the full facility showing all capabilities <span class="detail">Start at front door, end at delivery bay</span></li>
+    <li>Brief intro by manager: "Welcome to Bob Rohrman Collision Repair Center..." <span class="detail">Builds trust &amp; puts a face to the brand</span></li>
+  </ul>
+
+  <h3>Repair Process Videos <span class="count-box">30-60 sec each</span></h3>
+  <ul class="checklist">
+    <li>Time-lapse of a collision repair (start to finish) <span class="detail">Most shareable content type</span></li>
+    <li>PDR demo — dent removal in real-time <span class="detail">Satisfying to watch, great for social</span></li>
+    <li>Paint matching &amp; spray booth process <span class="detail">Color match reveal is compelling</span></li>
+    <li>Frame straightening in action <span class="detail">Shows serious equipment &amp; expertise</span></li>
+  </ul>
+
+  <h3>Customer Testimonial Videos <span class="count-box">30-60 sec each, 3-5 total</span></h3>
+  <ul class="checklist">
+    <li>Customer #1 testimonial <span class="detail">Film at pickup when they're happiest. Get permission.</span></li>
+    <li>Customer #2 testimonial <span class="detail">Ask: "What was your experience like?"</span></li>
+    <li>Customer #3 testimonial <span class="detail">Ask: "Would you recommend us?"</span></li>
+  </ul>
+
+  <h3>FAQ Answer Videos <span class="count-box">30-45 sec each</span></h3>
+  <ul class="checklist">
+    <li>"What should I do after a car accident?" <span class="detail">Embed on FAQ page + blog post</span></li>
+    <li>"How does insurance work with body shops?" <span class="detail">Embed on insurance claims page</span></li>
+    <li>"How long does collision repair take?" <span class="detail">Embed on collision repair page</span></li>
+    <li>"Do I have to use the shop my insurance recommends?" <span class="detail">Great for organic search queries</span></li>
+  </ul>
+</div>
+
+<!-- ===== PHOTO TIPS ===== -->
+<div class="section">
+  <h2>7. Photo &amp; Video Tips</h2>
+  <div class="two-col">
+    <ul class="checklist">
+      <li>Always shoot in <strong>landscape</strong> (horizontal) <span class="detail">16:9 ratio for web &amp; social</span></li>
+      <li>Use good lighting &mdash; natural or all shop lights ON <span class="detail">No dark, shadowy shots</span></li>
+      <li>Clean the area before shooting <span class="detail">Tidy shop = professional image</span></li>
+      <li>Minimum 1200px wide (phone camera is fine) <span class="detail">Don't zoom digitally &mdash; move closer</span></li>
+    </ul>
+    <ul class="checklist">
+      <li>Include logo/signage in background when possible <span class="detail">Brand signal for Google Image search</span></li>
+      <li>Name files descriptively, not IMG_4382.jpg <span class="detail">e.g., collision-repair-before-after-lafayette.jpg</span></li>
+      <li>For before/after: same angle, distance, lighting <span class="detail">Consistency makes the transformation pop</span></li>
+      <li>Get written photo release from any customers shown <span class="detail">Simple verbal + text confirmation works</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== OTHER INFO NEEDED ===== -->
+<div class="section">
+  <h2>8. Other Info Needed (Not Photos)</h2>
+  <ul class="checklist">
+    <li>Facebook page URL <span class="detail">For social links &amp; schema markup</span></li>
+    <li>Instagram page URL <span class="detail">For social links &amp; schema markup</span></li>
+    <li>Google Business Profile &mdash; Place ID <span class="detail">For direct review link on website</span></li>
+    <li>Google Analytics 4 Measurement ID <span class="detail">Format: G-XXXXXXXXXX &mdash; for traffic tracking</span></li>
+    <li>Google Search Console verification tag <span class="detail">For indexing &amp; search performance data</span></li>
+    <li>Team member names, roles &amp; certifications <span class="detail">For About page bios</span></li>
+  </ul>
+</div>
+
+<!-- ===== NOTES ===== -->
+<div class="notes-section">
+  <h3>Notes:</h3>
+  <div class="notes-lines"></div>
+</div>
+
+<div class="footer-bar">
+  Bob Rohrman Collision Repair Center &mdash; Website Content Checklist &mdash; Generated April 2026
+</div>
+
+</body>
+</html>
