@@ -5,20 +5,20 @@
 
 /* --- CSS Custom Properties --- */
 :root {
-  --primary: #0F172A;
-  --primary-light: #1E293B;
-  --accent: #DC2626;
-  --accent-hover: #B91C1C;
-  --accent-light: #FEE2E2;
-  --gold: #F59E0B;
-  --gold-hover: #D97706;
-  --text: #1E293B;
-  --text-light: #64748B;
+  --primary: #2D2D2D;
+  --primary-light: #3D3D3D;
+  --accent: #E8912D;
+  --accent-hover: #D07A1F;
+  --accent-light: #FFF3E6;
+  --gold: #E8912D;
+  --gold-hover: #D07A1F;
+  --text: #333333;
+  --text-light: #777777;
   --text-white: #F8FAFC;
   --bg: #FFFFFF;
-  --bg-light: #F8FAFC;
-  --bg-dark: #0F172A;
-  --border: #E2E8F0;
+  --bg-light: #F5F5F5;
+  --bg-dark: #2D2D2D;
+  --border: #EEEEEE;
   --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
   --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
   --shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
@@ -248,9 +248,9 @@ p {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5); }
-  70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(232, 145, 45, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(232, 145, 45, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 145, 45, 0); }
 }
 
 /* --- Top Bar --- */
@@ -497,7 +497,7 @@ p {
   min-height: 90vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--primary) 0%, #1a1a3e 50%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, #2D2D2D 0%, #3D3D3D 50%, #4A4A4A 100%);
   overflow: hidden;
 }
 
@@ -524,8 +524,8 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(245, 158, 11, 0.15);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: rgba(232, 145, 45, 0.15);
+  border: 1px solid rgba(232, 145, 45, 0.3);
   color: var(--gold);
   padding: 0.5rem 1rem;
   border-radius: 50px;
@@ -757,7 +757,7 @@ p {
 .why-icon {
   width: 48px;
   height: 48px;
-  background: rgba(245, 158, 11, 0.15);
+  background: rgba(232, 145, 45, 0.15);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
@@ -787,7 +787,7 @@ p {
 
 /* --- 24/7 Estimates Banner --- */
 .estimates-banner {
-  background: linear-gradient(135deg, var(--accent) 0%, #991B1B 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #B86A15 100%);
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
@@ -1523,7 +1523,7 @@ p {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: rgba(245, 158, 11, 0.1);
+  background: rgba(232, 145, 45, 0.1);
   border: 2px solid var(--gold);
   display: flex;
   align-items: center;
@@ -1551,7 +1551,7 @@ p {
 
 /* --- Page Header --- */
 .page-header {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, #2D2D2D 0%, #4A4A4A 100%);
   padding: 6rem 0 3rem;
   text-align: center;
 }
@@ -1700,7 +1700,7 @@ p {
 }
 
 .comparison-table .highlight-col {
-  background: rgba(245, 158, 11, 0.08);
+  background: rgba(232, 145, 45, 0.08);
   font-weight: 600;
 }
 
