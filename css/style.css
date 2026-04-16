@@ -1592,7 +1592,7 @@ p {
 /* --- Page Header --- */
 .page-header {
   background: linear-gradient(135deg, #2D2D2D 0%, #4A4A4A 100%);
-  padding: 6rem 0 3rem;
+  padding: 4rem 0 3rem;
   text-align: center;
 }
 
