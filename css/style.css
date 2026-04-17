@@ -1025,9 +1025,39 @@ p {
   max-width: 600px;
 }
 
+.estimates-content .label {
+  color: white !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
 .estimates-content h2 {
   color: white;
   margin-bottom: 1rem;
+}
+
+/* White CTA button on the orange estimates banner */
+.estimates-banner .btn-gold {
+  background: white;
+  color: var(--accent);
+  border-color: white;
+  font-weight: 700;
+}
+
+.estimates-banner .btn-gold:hover {
+  background: #fff8ed;
+  color: var(--accent-hover);
+  border-color: #fff8ed;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.estimates-banner .btn-gold svg {
+  stroke: var(--accent);
 }
 
 .estimates-content p {
