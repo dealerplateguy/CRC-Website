@@ -301,6 +301,63 @@
       color: var(--primary);
       border: 1px solid #e2e8f0;
     }
+
+    /* ===== SITE LINKS ===== */
+    .site-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    .site-link {
+      display: block;
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .site-link.current {
+      background: #fef2f2;
+      border: 2px solid #fecaca;
+    }
+    .site-link.proposed {
+      background: linear-gradient(135deg, #fff8ed 0%, #ffe5bd 100%);
+      border: 2px solid var(--accent);
+    }
+    .site-link-label {
+      display: inline-block;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 0.5rem;
+    }
+    .site-link.current .site-link-label {
+      background: #dc2626;
+      color: white;
+    }
+    .site-link.proposed .site-link-label {
+      background: var(--accent);
+      color: white;
+    }
+    .site-link-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+    .site-link-url {
+      font-family: 'Courier New', monospace;
+      font-size: 9pt;
+      color: var(--accent);
+      word-break: break-all;
+    }
+    .site-link.current .site-link-url {
+      color: #dc2626;
+    }
   </style>
 </head>
 <body>
@@ -335,6 +392,19 @@
         <h3>What if I told you I&rsquo;ve already built something better &mdash; for free?</h3>
         <p>And I can launch it in 7 days, cancel the $300 vendor, and run it in-house.</p>
       </div>
+    </div>
+
+    <div class="site-links">
+      <a href="https://www.rohrmanbodyshop.com" target="_blank" class="site-link current">
+        <div class="site-link-label">Current Site</div>
+        <div class="site-link-title">What We Have Today</div>
+        <div class="site-link-url">rohrmanbodyshop.com</div>
+      </a>
+      <a href="https://dealerplateguy.github.io/CRC-Website/" target="_blank" class="site-link proposed">
+        <div class="site-link-label">Proposed Site</div>
+        <div class="site-link-title">What I&rsquo;ve Built</div>
+        <div class="site-link-url">dealerplateguy.github.io/CRC-Website</div>
+      </a>
     </div>
 
   </section>
