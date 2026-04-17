@@ -358,6 +358,104 @@
     .site-link.current .site-link-url {
       color: #dc2626;
     }
+
+    /* ===== INVISIBLE CALLOUT ===== */
+    .invisible-callout {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: white;
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .invisible-callout-text {
+      flex: 1;
+    }
+    .invisible-callout-label {
+      display: inline-block;
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 0.3rem;
+    }
+    .invisible-callout-headline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15pt;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 0.3rem;
+    }
+    .invisible-callout-sub {
+      font-size: 10pt;
+      color: rgba(255,255,255,0.9);
+    }
+
+    /* ===== BUDGET TABLE ===== */
+    .budget-section {
+      padding: 0.3in 0;
+    }
+    .budget-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 0.75rem 0;
+      font-size: 10pt;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+    .budget-table thead tr {
+      background: var(--primary);
+      color: white;
+    }
+    .budget-table th {
+      padding: 10px 12px;
+      font-weight: 700;
+      text-align: left;
+      font-size: 9.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .budget-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+      background: white;
+      font-size: 10pt;
+    }
+    .budget-table tbody tr:last-child td { border-bottom: none; }
+    .budget-table tbody tr:nth-child(even) td { background: #fafbfc; }
+    .budget-table tr.recommended td {
+      background: #fff8ed !important;
+      font-weight: 600;
+      border-left: 4px solid var(--accent);
+    }
+    .tier {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .budget-price {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .pitch-tip {
+      background: #fff8ed;
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      font-size: 10pt;
+      border-radius: 0 6px 6px 0;
+    }
+    .pitch-tip strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -405,6 +503,14 @@
         <div class="site-link-title">What I&rsquo;ve Built</div>
         <div class="site-link-url">dealerplateguy.github.io/CRC-Website</div>
       </a>
+    </div>
+
+    <div class="invisible-callout">
+      <div class="invisible-callout-text">
+        <div class="invisible-callout-label">The Real Problem</div>
+        <div class="invisible-callout-headline">I searched &ldquo;collision repair near me&rdquo; on Google. We didn&rsquo;t show up.</div>
+        <div class="invisible-callout-sub">Not on page 1. Not on page 2. Our website is invisible to the people we&rsquo;re paying $3,600 a year to reach.</div>
+      </div>
     </div>
 
   </section>
@@ -475,6 +581,54 @@
         </tr>
       </tbody>
     </table>
+  </section>
+
+  <!-- ===== GROWTH INVESTMENT ===== -->
+  <section class="budget-section avoid-break">
+    <div class="section-label">The Growth Opportunity</div>
+    <h2>Redirect the $300/month into Google Ads and actually get found.</h2>
+    <p style="margin: 0.5rem 0 1rem; color: var(--text-light); font-size: 10.5pt;">Cancelling the vendor frees up $300 every month. Invest that money into Local Services Ads and review generation to actually show up when customers are searching.</p>
+
+    <table class="budget-table">
+      <thead>
+        <tr>
+          <th>Strategy</th>
+          <th>Monthly Investment</th>
+          <th>Expected Outcome</th>
+          <th>Time to Page 1</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tier">Current (Do Nothing)</td>
+          <td class="budget-price" style="color: var(--danger);">$300/mo wasted</td>
+          <td>Still invisible on Google</td>
+          <td>Never</td>
+        </tr>
+        <tr class="recommended">
+          <td class="tier">Recommended Start</td>
+          <td class="budget-price">$500&ndash;$1,000/mo</td>
+          <td>Google Ads + reviews + local listings<br>Competitive on local search</td>
+          <td>4&ndash;8 months</td>
+        </tr>
+        <tr>
+          <td class="tier">Aggressive Growth</td>
+          <td class="budget-price">$1,500&ndash;$3,000/mo</td>
+          <td>Dominate local + Google Map Pack</td>
+          <td>3&ndash;6 months</td>
+        </tr>
+        <tr>
+          <td class="tier">Market Domination</td>
+          <td class="budget-price">$3,000&ndash;$5,000/mo</td>
+          <td>Top 3 organic + Map Pack + paid ads<br>Crush every competitor in a 45-mile radius</td>
+          <td>1&ndash;3 months</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pitch-tip">
+      <strong>The smart play:</strong> Cancel the $300/month vendor. Take that exact same money and put it into Local Services Ads (the ones with the green &ldquo;Google Guaranteed&rdquo; badge at the very top of search results). We&rsquo;re not spending more &mdash; we&rsquo;re redirecting dollars from something invisible to something that actually drives phone calls and walk-ins.
+    </div>
   </section>
 
   <!-- ===== THE ASK ===== -->
