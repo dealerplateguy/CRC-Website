@@ -19,6 +19,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.rohrmanbodyshop.com/pages/west-lafayette-collision-repair.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.rohrmanbodyshop.com/pages/services/collision-repair.html</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -98,8 +104,14 @@
   </url>
   <url>
     <loc>https://www.rohrmanbodyshop.com/blog/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rohrmanbodyshop.com/blog/posts/collision-repair-purdue-students.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
