@@ -397,6 +397,17 @@
       border-left: 4px solid var(--accent);
     }
 
+    /* Dark section table fix — readable on dark background */
+    .section-dark .data-table td {
+      background: #3a3a3a;
+      color: white;
+    }
+    .section-dark .data-table tbody tr:nth-child(even) td { background: #333333; }
+    .section-dark .data-table tr.total td {
+      background: var(--accent-light) !important;
+      color: var(--primary) !important;
+    }
+
     /* ===== GBP AUDIT BOX ===== */
     .audit-box {
       background: white;
@@ -769,8 +780,8 @@
         <div class="metric-label">Months to Page 1 rankings</div>
       </div>
       <div class="metric">
-        <div class="metric-value">13&ndash;33x</div>
-        <div class="metric-label">Expected return on marketing investment</div>
+        <div class="metric-value">3.4</div>
+        <div class="metric-label">Extra customers per month needed to break even</div>
       </div>
     </div>
 
@@ -798,8 +809,9 @@
         <li><a href="#budget">Part 3: The $1,500/Month Growth Budget</a></li>
         <li><a href="#90day">Part 4: The 90-Day Execution Roadmap</a></li>
         <li><a href="#domains">Part 5: Domain Protection Strategy</a></li>
-        <li><a href="#roi">Part 6: Return on Investment Math</a></li>
-        <li><a href="#approval">Part 7: The Ask &amp; Approval Checklist</a></li>
+        <li><a href="#tracking">Part 6: How We&rsquo;ll Measure &amp; Prove Results</a></li>
+        <li><a href="#roi">Part 7: Return on Investment Math</a></li>
+        <li><a href="#approval">Part 8: The Ask &amp; Approval Checklist</a></li>
       </ol>
     </div>
   </div>
@@ -1081,19 +1093,19 @@
         </div>
         <div class="roi-operator">÷</div>
         <div class="roi-element">
-          <div class="big">$4,000</div>
-          <div class="small">Avg. Repair Ticket</div>
+          <div class="big">$445</div>
+          <div class="small">Net Profit Per Ticket<br>($4,009 × 11.1%)</div>
         </div>
         <div class="roi-operator">=</div>
         <div class="roi-element">
-          <div class="big accent">0.4</div>
+          <div class="big accent">3.4</div>
           <div class="small">Customers to Break Even</div>
         </div>
       </div>
       <div class="roi-conclusion">
-        We need to land <strong>less than half of one extra customer per month</strong> to break even on the full $1,500 spend.<br>
+        Based on our real numbers ($4,009 average ticket, 11.1% net margin), we need <strong>just 3.4 extra customers per month</strong> to fully break even on the $1,500 spend.<br>
         Industry averages suggest 6&ndash;12 additional customers per month from this strategy.<br>
-        That&rsquo;s <strong>$24,000&ndash;$48,000 in additional monthly revenue</strong> &mdash; a 16x to 32x ROI.
+        That&rsquo;s <strong>$2,670&ndash;$5,340 in additional monthly profit</strong> &mdash; on top of the $300/month vendor savings.
       </div>
     </div>
   </div>
@@ -1250,13 +1262,122 @@
 </section>
 
 <!-- ============================================
-     PART 6: ROI
+     PART 6: MEASUREMENT & TRACKING
+     ============================================ -->
+<section class="section" id="tracking">
+  <div class="container">
+    <div class="section-label">Part 6</div>
+    <h2>How We&rsquo;ll Measure &amp; Prove Results.</h2>
+    <p class="section-lead">Accountability is built into this plan. Here&rsquo;s exactly how we&rsquo;ll track every new customer driven by our digital marketing &mdash; so you&rsquo;ll know precisely whether we&rsquo;re hitting the 3.4/month break-even number.</p>
+
+    <h3>The 5-Layer Tracking System</h3>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 22%;">Tracking Source</th>
+          <th style="width: 28%;">What It Measures</th>
+          <th>How It Ties Back to a Paying Customer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight: 700;">Google Local Services Ads</td>
+          <td>Every phone call &amp; lead from the ad</td>
+          <td>Google provides a dashboard showing lead name, phone number, call recording, and cost. Front desk marks each in the DMS: &ldquo;How did you hear about us? → Google Ad.&rdquo;</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 700;">Call Tracking Numbers</td>
+          <td>Unique phone numbers per channel</td>
+          <td>CallRail or similar (~$45/mo included in budget) assigns a different phone number to Google Ads, GBP listing, website, Facebook, etc. Every call is recorded and attributed to source.</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 700;">Google Analytics 4 (GA4)</td>
+          <td>Every website visitor &amp; action</td>
+          <td>Tracks which page they landed on, which CTA they clicked, whether they filled out the 24/7 estimate form, called, or got directions. All ties to traffic source.</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 700;">Google Business Profile Insights</td>
+          <td>Map searches &amp; direction requests</td>
+          <td>Shows every time someone searched for us, called from the listing, got directions, or viewed our photos. Direct signal of purchase intent.</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 700;">Front Desk Intake Question</td>
+          <td>Self-reported attribution</td>
+          <td>New intake form field: &ldquo;How did you hear about us?&rdquo; with checkboxes (Google search, Google Ad, Insurance referral, Dealership referral, Friend/Family, Drive-by, Other). Recorded in DMS for every RO.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>The Monthly Performance Report</h3>
+    <p>You will receive a 1-page report on the 1st of every month showing:</p>
+
+    <div class="exec-summary">
+      <ul>
+        <li><strong>New customer count attributed to each channel</strong> (Google Ads, GBP, organic search, referrals)</li>
+        <li><strong>Total leads generated &amp; conversion rate</strong> (of X leads, Y became paying customers)</li>
+        <li><strong>Revenue generated per channel</strong> and per dollar spent</li>
+        <li><strong>Cost per lead and cost per customer</strong> (actual, not estimated)</li>
+        <li><strong>Google ranking positions</strong> for 10 tracked keywords</li>
+        <li><strong>Review velocity</strong> &mdash; new Google reviews this month, running total, star rating</li>
+        <li><strong>Website metrics</strong> &mdash; visits, estimate form submissions, phone clicks</li>
+        <li><strong>GBP insights</strong> &mdash; views, calls, direction requests, photo views</li>
+      </ul>
+    </div>
+
+    <h3>Baseline Measurement (Month 0)</h3>
+    <p>Before we launch, we&rsquo;ll capture the <strong>current baseline</strong> for every metric above. Every month after, we&rsquo;ll show the delta. <strong>No guessing, no hand-waving &mdash; just numbers.</strong></p>
+
+    <div class="problem-callout" style="background: linear-gradient(135deg, var(--success) 0%, #047857 100%);">
+      <div class="problem-callout-label">The Kill Switch</div>
+      <div class="problem-callout-headline">If we&rsquo;re not hitting 3.4 extra customers/month by Day 120, we pause and reassess.</div>
+      <p>I&rsquo;m putting real accountability on this plan. If the numbers don&rsquo;t prove out after 4 months of full execution, we stop paid ad spend, regroup, and adjust. You&rsquo;re not locked into a year of spend without proof it&rsquo;s working.</p>
+    </div>
+
+    <h3>Example: How We&rsquo;ll Know We Hit 6 New Customers in Month 3</h3>
+    <div class="audit-box">
+      <div class="audit-item">
+        <div class="audit-status good">Attributed</div>
+        <div>
+          <div class="audit-title">2 customers from Google Local Services Ads</div>
+          <div class="audit-desc">Google dashboard shows 2 leads converted to appointments. Cost per customer: $250. Revenue per customer: $4,009. Margin per customer: $445.</div>
+        </div>
+      </div>
+      <div class="audit-item">
+        <div class="audit-status good">Attributed</div>
+        <div>
+          <div class="audit-title">2 customers from Google Business Profile</div>
+          <div class="audit-desc">Front desk intake: &ldquo;I found you on Google Maps.&rdquo; GBP insights show 180 calls and 240 direction requests this month (up from 45 baseline).</div>
+        </div>
+      </div>
+      <div class="audit-item">
+        <div class="audit-status good">Attributed</div>
+        <div>
+          <div class="audit-title">1 customer from organic search</div>
+          <div class="audit-desc">GA4 shows a customer who read 3 pages (Hail Damage, About, Contact) after searching &ldquo;hail damage repair Lafayette Indiana&rdquo; &mdash; then submitted the 24/7 photo estimate form.</div>
+        </div>
+      </div>
+      <div class="audit-item">
+        <div class="audit-status good">Attributed</div>
+        <div>
+          <div class="audit-title">1 customer from West Lafayette/Purdue landing page</div>
+          <div class="audit-desc">Purdue parent from Ohio found the West Lafayette, Indiana landing page, called the number, booked appointment for student&rsquo;s car.</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top: 1.25rem; font-size: 10.5pt;"><strong>Bottom line:</strong> You won&rsquo;t have to wonder if digital marketing is working. We&rsquo;ll show you exactly which channels drove which customers, how much each one cost, and how much each one paid.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     PART 7: ROI
      ============================================ -->
 <section class="section section-dark" id="roi">
   <div class="container">
-    <div class="section-label" style="color: var(--accent);">Part 6</div>
+    <div class="section-label" style="color: var(--accent);">Part 7</div>
     <h2 style="color: white;">Return on Investment: The Business Case.</h2>
-    <p style="color: #cbd5e1; max-width: 6.5in; font-size: 12pt; margin-bottom: 1.5rem;">Here&rsquo;s the math over 12 months. This plan pays for itself before Month 2, then generates significant profit for the remaining 10 months.</p>
+    <p style="color: #cbd5e1; max-width: 6.5in; font-size: 12pt; margin-bottom: 1.5rem;">Using our actual numbers &mdash; $4,009 average ticket and 11.1% net margin ($445 profit per job) &mdash; here&rsquo;s the Year 1 financial picture.</p>
 
     <table class="data-table" style="font-size: 10.5pt;">
       <thead>
@@ -1268,34 +1389,39 @@
       </thead>
       <tbody>
         <tr>
-          <td style="font-weight: 600;">Old vendor (cancelled)</td>
+          <td style="font-weight: 600;">Old vendor spend (cancelled)</td>
           <td style="color: var(--success); font-weight: 700;">+$3,600 saved</td>
-          <td>Money back in the business.</td>
+          <td>Direct bottom-line savings.</td>
         </tr>
         <tr>
           <td style="font-weight: 600;">Defensive domain purchases</td>
-          <td style="color: var(--danger); font-weight: 700;">&minus;$63</td>
+          <td style="color: #fca5a5; font-weight: 700;">&minus;$63</td>
           <td>One-time.</td>
         </tr>
         <tr>
           <td style="font-weight: 600;">Digital marketing budget ($1,500 × 12)</td>
-          <td style="color: var(--danger); font-weight: 700;">&minus;$18,000</td>
+          <td style="color: #fca5a5; font-weight: 700;">&minus;$18,000</td>
           <td>Ads, reviews, citations, tools.</td>
         </tr>
         <tr>
-          <td style="font-weight: 600;">Conservative revenue lift (6 customers/mo × $4,000)</td>
-          <td style="color: var(--success); font-weight: 700;">+$288,000</td>
-          <td>Low end of expected range.</td>
+          <td style="font-weight: 600;">Conservative revenue lift (6 customers/mo × $4,009 × 12)</td>
+          <td style="color: var(--success); font-weight: 700;">+$288,648</td>
+          <td>Additional top-line revenue.</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600;">Net profit from new customers (11.1% of $288,648)</td>
+          <td style="color: var(--success); font-weight: 700;">+$32,040</td>
+          <td>What actually hits the bottom line.</td>
         </tr>
         <tr class="total">
-          <td>Net Year 1 Impact</td>
-          <td style="color: var(--success); font-weight: 800; font-size: 14pt;">+$273,537</td>
-          <td>Conservative estimate.</td>
+          <td>Net Year 1 Bottom-Line Impact</td>
+          <td style="color: var(--success); font-weight: 800; font-size: 14pt;">+$17,577</td>
+          <td>Conservative estimate (profit basis).</td>
         </tr>
       </tbody>
     </table>
 
-    <p style="color: #cbd5e1; font-size: 10.5pt; margin-top: 1rem;">And that&rsquo;s the <em>conservative</em> estimate. At the high end (12 new customers per month), net impact approaches <strong style="color: var(--accent);">$560,000 in Year 1</strong>. Beyond the direct revenue, this also builds long-term brand equity, a review moat that&rsquo;s hard for competitors to catch up to, and a digital infrastructure that continues working for years.</p>
+    <p style="color: #cbd5e1; font-size: 10.5pt; margin-top: 1rem;">At the <strong style="color: var(--accent);">high end (12 new customers per month)</strong>: revenue lift of $577,296, net profit of $64,080, and <strong style="color: var(--accent);">Net Year 1 Bottom-Line Impact of $49,617</strong>. Beyond direct profit, this also builds long-term brand equity, a review moat that&rsquo;s hard for competitors to catch up to, and a digital infrastructure that compounds for years &mdash; Year 2 returns are typically 2&ndash;3x Year 1 because the SEO foundation is already established.</p>
   </div>
 </section>
 
@@ -1304,7 +1430,7 @@
      ============================================ -->
 <section class="section" id="approval">
   <div class="container">
-    <div class="section-label">Part 7</div>
+    <div class="section-label">Part 8</div>
     <h2>The Ask &amp; Approval Checklist.</h2>
     <p class="section-lead">Here&rsquo;s exactly what I need to execute this plan. Simple yes or no on each item.</p>
 
@@ -1326,7 +1452,7 @@
     <div class="roi-box" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);">
       <h3 style="color: white;">Bottom Line</h3>
       <div style="font-family: 'Montserrat', sans-serif; font-size: 18pt; font-weight: 800; line-height: 1.3; color: white; max-width: 6in; margin: 0.75rem auto;">
-        Approve this plan and the first new customer pays for the first month of the entire program. Everything after that is pure profit.
+        Approve this plan. We only need 3.4 extra customers per month to break even. At just 6 extra, we put an additional $17,577 to the bottom line. At 12, we clear $49,617. And it all compounds in Year 2.
       </div>
     </div>
   </div>
