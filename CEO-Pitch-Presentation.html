@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Taking the Wheel: A Proposal to Modernize Bob Rohrman Collision Repair's Digital Presence</title>
+  <title>The 2-Minute Pitch: Bring Our Website In-House</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap');
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -30,10 +30,9 @@
     @media print {
       body { padding: 0; }
       .no-print { display: none !important; }
-      @page { margin: 0.45in 0.5in; size: letter; }
+      @page { margin: 0.4in 0.5in; size: letter; }
       .page-break { page-break-before: always; }
-      .section { page-break-inside: avoid; }
-      .hero { page-break-after: always; }
+      .avoid-break { page-break-inside: avoid; }
     }
 
     .print-bar {
@@ -58,169 +57,130 @@
     }
 
     .container {
-      max-width: 8in;
+      max-width: 7.5in;
       margin: 0 auto;
-      padding: 0 0.4in;
+      padding: 0 0.3in;
     }
 
-    /* ===== HERO / COVER PAGE ===== */
-    .hero {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2D2D2D 100%);
-      color: white;
-      padding: 1.2in 0.5in 1in;
-      min-height: 10in;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
+    /* ===== PAGE 1: THE HOOK ===== */
+    .hook {
+      padding: 0.4in 0 0.3in;
+      border-bottom: 3px solid var(--accent);
     }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 8px;
-      background: linear-gradient(90deg, var(--accent), #ffc26a);
-    }
-    .hero-label {
+    .hook-label {
       display: inline-block;
       font-size: 9pt;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
-    .hero h1 {
+    .hook h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 38pt;
-      font-weight: 800;
-      line-height: 1.05;
-      margin-bottom: 1.5rem;
+      font-size: 26pt;
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--primary);
       letter-spacing: -1px;
+      margin-bottom: 0.25rem;
     }
-    .hero h1 .highlight {
-      color: var(--accent);
-    }
-    .hero-sub {
-      font-size: 14pt;
-      color: #cbd5e1;
-      margin-bottom: 3rem;
-      max-width: 6in;
-      line-height: 1.5;
-    }
-    .hero-meta {
-      border-top: 1px solid rgba(255,255,255,0.15);
-      padding-top: 1.5rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-    .hero-meta-item {
-      font-size: 9pt;
-    }
-    .hero-meta-label {
-      color: #94a3b8;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 7.5pt;
-      margin-bottom: 4px;
-    }
-    .hero-meta-value {
-      color: white;
-      font-weight: 600;
-      font-size: 10.5pt;
-    }
-
-    /* ===== SECTIONS ===== */
-    .section {
-      padding: 0.6in 0;
-    }
-    .section-alt {
-      background: var(--bg-light);
-    }
-    .section-dark {
-      background: var(--primary);
-      color: white;
-    }
-    .section-dark h2, .section-dark h3, .section-dark p { color: white; }
-
-    .section-label {
-      display: inline-block;
-      font-size: 8.5pt;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-    h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 22pt;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 0.75rem;
-      color: var(--primary);
-      letter-spacing: -0.5px;
-    }
-    .section-dark h2 { color: white; }
-    h3 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 14pt;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-      color: var(--primary);
-    }
-    h4 {
-      font-family: 'Inter', sans-serif;
-      font-size: 11pt;
-      font-weight: 700;
-      margin-bottom: 0.35rem;
-      color: var(--primary);
-    }
-    .section-lead {
+    .hook-sub {
       font-size: 13pt;
-      color: var(--text-light);
-      max-width: 6.5in;
-      margin-bottom: 2rem;
-      line-height: 1.5;
-    }
-
-    /* ===== THE BIG NUMBER ===== */
-    .big-number-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-    .big-number {
-      background: white;
-      padding: 1.2rem 1.4rem;
-      border-radius: 10px;
-      border-left: 4px solid var(--accent);
-      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-    }
-    .big-number-value {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 28pt;
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-    .big-number-label {
-      font-size: 9.5pt;
       color: var(--text-light);
       font-weight: 500;
     }
 
+    /* ===== THREE QUESTIONS ===== */
+    .questions {
+      padding: 0.3in 0;
+    }
+    .question-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .question-item:last-child { border-bottom: none; }
+    .question-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36pt;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      min-width: 60px;
+    }
+    .question-text h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16pt;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+    .question-text p {
+      font-size: 10.5pt;
+      color: var(--text-light);
+    }
+
+    /* ===== THE ANSWER / VISUAL CUE ===== */
+    .visual-cue {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2D2D2D 100%);
+      color: white;
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      margin: 1rem 0 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .visual-cue-icon {
+      font-size: 32pt;
+      line-height: 1;
+    }
+    .visual-cue-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14pt;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .visual-cue-text small {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 10pt;
+      color: #cbd5e1;
+      margin-top: 3px;
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
     /* ===== COMPARISON TABLE ===== */
+    .comparison-section {
+      padding: 0.3in 0;
+    }
     .comparison {
       width: 100%;
       border-collapse: separate;
       border-spacing: 0;
-      margin: 1rem 0;
+      margin-top: 0.5rem;
       font-size: 10pt;
       border-radius: 8px;
       overflow: hidden;
@@ -231,333 +191,115 @@
       color: white;
     }
     .comparison th {
-      padding: 12px 14px;
+      padding: 10px 12px;
       font-weight: 700;
       text-align: left;
-      font-size: 10pt;
+      font-size: 9.5pt;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
     .comparison th.before-col { background: #475569; }
     .comparison th.after-col { background: var(--accent); }
     .comparison td {
-      padding: 12px 14px;
+      padding: 9px 12px;
       border-bottom: 1px solid #e2e8f0;
       vertical-align: top;
       background: white;
+      font-size: 10pt;
     }
     .comparison tbody tr:last-child td { border-bottom: none; }
     .comparison tbody tr:nth-child(even) td { background: #fafbfc; }
-    .comparison td.feature { font-weight: 600; color: var(--primary); width: 26%; }
-    .comparison td.before-cell { color: var(--danger); width: 37%; }
-    .comparison td.after-cell { color: var(--success); font-weight: 500; width: 37%; }
+    .comparison td.feature { font-weight: 600; color: var(--primary); width: 28%; }
+    .comparison td.before-cell { color: var(--danger); width: 36%; }
+    .comparison td.after-cell { color: var(--success); font-weight: 500; width: 36%; }
+    .comparison tr.total td {
+      background: #fff8ed !important;
+      font-weight: 800;
+      font-size: 11pt;
+      padding: 12px;
+      border-top: 3px solid var(--accent);
+    }
+    .comparison tr.total td.before-cell { color: var(--danger); }
+    .comparison tr.total td.after-cell { color: var(--accent); }
     .x { color: var(--danger); font-weight: 700; margin-right: 6px; }
     .check { color: var(--success); font-weight: 700; margin-right: 6px; }
 
-    /* ===== PRICING BOX ===== */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin: 1.5rem 0 0.5rem;
-    }
-    .pricing-card {
-      border-radius: 12px;
-      padding: 1.5rem;
-      position: relative;
-    }
-    .pricing-card.old {
-      background: #fef2f2;
-      border: 2px solid #fecaca;
-    }
-    .pricing-card.new {
-      background: linear-gradient(135deg, #fff8ed 0%, #ffe5bd 100%);
-      border: 2px solid var(--accent);
-    }
-    .pricing-card .badge {
-      display: inline-block;
-      font-size: 8pt;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      padding: 4px 10px;
-      border-radius: 3px;
-      margin-bottom: 1rem;
-    }
-    .pricing-card.old .badge { background: #dc2626; color: white; }
-    .pricing-card.new .badge { background: var(--accent); color: white; }
-    .pricing-card h3 {
-      font-size: 13pt;
-      margin-bottom: 0.75rem;
-    }
-    .pricing-big {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 32pt;
-      font-weight: 800;
-      line-height: 1;
-      margin: 0.5rem 0 0.25rem;
-    }
-    .pricing-card.old .pricing-big { color: var(--danger); }
-    .pricing-card.new .pricing-big { color: var(--accent); }
-    .pricing-period {
-      color: var(--text-light);
-      font-size: 10pt;
-      margin-bottom: 1rem;
-    }
-    .pricing-list {
-      list-style: none;
-      font-size: 10pt;
-    }
-    .pricing-list li {
-      padding: 4px 0 4px 22px;
-      position: relative;
-    }
-    .pricing-card.old .pricing-list li::before {
-      content: '✕';
-      color: var(--danger);
-      position: absolute;
-      left: 0;
-      font-weight: 700;
-    }
-    .pricing-card.new .pricing-list li::before {
-      content: '✓';
-      color: var(--success);
-      position: absolute;
-      left: 0;
-      font-weight: 700;
-    }
-
-    /* ===== FEATURE GRID ===== */
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-    .feature {
-      background: white;
-      padding: 1rem 1.2rem;
-      border-radius: 8px;
-      border-left: 3px solid var(--accent);
-    }
-    .feature h4 {
-      font-size: 10.5pt;
-      margin-bottom: 0.3rem;
-    }
-    .feature p {
-      font-size: 9.5pt;
-      color: var(--text-light);
-      line-height: 1.45;
-    }
-
-    /* ===== NUMBERED LIST ===== */
-    .numbered {
-      list-style: none;
-      counter-reset: num;
-      margin: 1rem 0;
-    }
-    .numbered li {
-      counter-increment: num;
-      padding: 0.7rem 0 0.7rem 3.5rem;
-      position: relative;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    .numbered li:last-child { border-bottom: none; }
-    .numbered li::before {
-      content: counter(num);
-      position: absolute;
-      left: 0;
-      top: 0.7rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      background: var(--accent);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 13pt;
-    }
-    .numbered li strong {
-      display: block;
-      font-size: 11pt;
-      margin-bottom: 3px;
-      color: var(--primary);
-    }
-    .numbered li span {
-      font-size: 9.5pt;
-      color: var(--text-light);
-    }
-
-    /* ===== DOMAIN TABLE ===== */
-    .domain-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 10pt;
-      margin: 1rem 0;
-    }
-    .domain-table th {
-      background: var(--primary);
-      color: white;
-      padding: 10px 12px;
-      text-align: left;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 9pt;
-      letter-spacing: 0.5px;
-    }
-    .domain-table td {
-      padding: 10px 12px;
-      border-bottom: 1px solid #e2e8f0;
-      vertical-align: top;
-    }
-    .domain-table tbody tr:hover td { background: #fafbfc; }
-    .domain-name {
-      font-family: 'Courier New', monospace;
-      font-weight: 700;
-      color: var(--primary);
-    }
-    .priority-badge {
-      display: inline-block;
-      font-size: 7.5pt;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 3px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .priority-must { background: var(--accent); color: white; }
-    .priority-strong { background: #fef3c7; color: #92400e; }
-
-    /* ===== QUOTE / CALLOUT ===== */
-    .callout {
-      background: var(--primary);
-      color: white;
-      border-radius: 12px;
-      padding: 1.5rem 1.8rem;
-      margin: 1.5rem 0;
-      position: relative;
-    }
-    .callout-label {
-      color: var(--accent);
-      font-size: 9pt;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-    .callout-big {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 17pt;
-      font-weight: 800;
-      line-height: 1.3;
-    }
-    .callout-small {
-      font-size: 10.5pt;
-      color: #cbd5e1;
-      margin-top: 0.75rem;
-    }
-
-    /* ===== TIMELINE ===== */
-    .timeline {
-      position: relative;
-      padding-left: 2rem;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 8px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--accent);
-    }
-    .timeline-item {
-      position: relative;
-      padding-bottom: 1.25rem;
-    }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -2rem;
-      top: 6px;
-      width: 18px;
-      height: 18px;
-      background: var(--accent);
-      border-radius: 50%;
-      border: 3px solid white;
-      box-shadow: 0 0 0 2px var(--accent);
-    }
-    .timeline-item h4 {
-      font-size: 11pt;
-    }
-    .timeline-item p {
-      font-size: 9.5pt;
-      color: var(--text-light);
-      margin-top: 0.25rem;
-    }
-
-    /* ===== FINAL ASK ===== */
-    .final-ask {
+    /* ===== THE ASK ===== */
+    .the-ask {
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
       color: white;
-      padding: 0.7in 0.5in;
+      padding: 1.5rem 1.75rem;
       border-radius: 16px;
-      margin: 1.5rem 0;
-      text-align: center;
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
     }
-    .final-ask h2 {
-      color: white;
-      font-size: 26pt;
-    }
-    .final-ask p {
-      font-size: 13pt;
-      color: rgba(255,255,255,0.95);
-      max-width: 6in;
-      margin: 1rem auto 1.5rem;
-    }
-    .final-ask .big-ask {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 14pt;
+    .the-ask-label {
+      display: inline-block;
+      font-size: 9pt;
       font-weight: 700;
-      padding: 0.75rem 2rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0.5rem;
+    }
+    .the-ask h2 {
+      color: white;
+      font-size: 18pt;
+      margin-bottom: 0.4rem;
+    }
+    .the-ask p {
+      color: rgba(255,255,255,0.95);
+      font-size: 11pt;
+    }
+    .savings-badge {
       background: white;
       color: var(--accent);
-      border-radius: 50px;
-      display: inline-block;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-
-    p { margin-bottom: 0.8rem; font-size: 10.5pt; }
-
-    .footer-note {
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
       text-align: center;
-      padding: 0.5in 0;
+      min-width: 180px;
+    }
+    .savings-badge .big {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24pt;
+      font-weight: 900;
+      line-height: 1;
+      display: block;
+    }
+    .savings-badge .small {
       font-size: 9pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
       color: var(--text-light);
-      border-top: 1px solid #e2e8f0;
+      display: block;
+      margin-top: 4px;
     }
 
-    ul.simple {
-      padding-left: 1.2rem;
-      margin-bottom: 0.8rem;
-    }
-    ul.simple li {
-      font-size: 10.5pt;
-      margin-bottom: 0.35rem;
-    }
-
-    .highlight-box {
+    /* ===== DEMO CALLOUT ===== */
+    .demo-callout {
       background: #fff8ed;
-      border-left: 4px solid var(--accent);
+      border: 2px dashed var(--accent);
+      border-radius: 10px;
       padding: 1rem 1.25rem;
       margin: 1rem 0;
-      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
     }
-    .highlight-box strong {
+    .demo-callout strong {
       color: var(--accent);
+      font-weight: 700;
+    }
+    .demo-url {
+      font-family: 'Courier New', monospace;
+      font-size: 9.5pt;
+      background: white;
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: var(--primary);
+      border: 1px solid #e2e8f0;
     }
   </style>
 </head>
@@ -567,75 +309,58 @@
   <button onclick="window.print()">Print or Save as PDF (Cmd/Ctrl + P)</button>
 </div>
 
-<!-- ============================================
-     COVER PAGE
-     ============================================ -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-label">Confidential Proposal</div>
-    <h1>Taking the<br><span class="highlight">Digital Wheel.</span></h1>
-    <p class="hero-sub">A proposal to bring Bob Rohrman Collision Repair Center&rsquo;s web presence in-house &mdash; saving <strong style="color: var(--accent);">over $3,500 per year</strong> while dominating local search in Lafayette and all of Tippecanoe County.</p>
+<div class="container">
 
-    <div class="hero-meta">
-      <div class="hero-meta-item">
-        <div class="hero-meta-label">Prepared For</div>
-        <div class="hero-meta-value">CEO, Bob Rohrman Auto Group</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="hero-meta-label">Prepared By</div>
-        <div class="hero-meta-value">Austin Conroy</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="hero-meta-label">Date</div>
-        <div class="hero-meta-value">April 2026</div>
-      </div>
-    </div>
+  <!-- ===== HOOK ===== -->
+  <div class="hook">
+    <div class="hook-label">2-Minute Pitch</div>
+    <h1>Let me save us $3,540<br>this year.</h1>
+    <p class="hook-sub">And give us a better website while I&rsquo;m at it.</p>
   </div>
-</section>
 
-<!-- ============================================
-     THE OPPORTUNITY
-     ============================================ -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">The Opportunity</div>
-    <h2>$3,600/year is being spent to run a website that&rsquo;s losing the local search battle.</h2>
-    <p class="section-lead">Right now, Bob Rohrman Collision Repair Center pays $300 every month to an outside vendor to host and maintain its website &mdash; that&rsquo;s $3,600 per year going out the door. Despite that spend, the site underperforms on the single metric that drives walk-ins: organic local search.</p>
-
-    <div class="big-number-grid">
-      <div class="big-number">
-        <div class="big-number-value">$3,600</div>
-        <div class="big-number-label">Current annual hosting spend</div>
-      </div>
-      <div class="big-number">
-        <div class="big-number-value">$0</div>
-        <div class="big-number-label">Actual hosting cost with modern tools</div>
-      </div>
-      <div class="big-number">
-        <div class="big-number-value">29</div>
-        <div class="big-number-label">Fully-built, SEO-optimized pages ready to deploy</div>
-      </div>
-      <div class="big-number">
-        <div class="big-number-value">$3,500+</div>
-        <div class="big-number-label">Savings going back to the business in Year 1</div>
+  <!-- ===== THREE QUESTIONS ===== -->
+  <section class="questions avoid-break">
+    <div class="question-item">
+      <div class="question-num">1</div>
+      <div class="question-text">
+        <h3>Did you know we pay $300 a month to host our website?</h3>
+        <p>That&rsquo;s $3,600 a year going to an outside vendor.</p>
       </div>
     </div>
 
-    <div class="callout">
-      <div class="callout-label">The Bottom Line</div>
-      <div class="callout-big">&ldquo;We&rsquo;re spending $3,600 a year to lose to competitors. That budget, redirected to paid ads or pocketed, would double the ROI of the site.&rdquo;</div>
+    <div class="question-item">
+      <div class="question-num">2</div>
+      <div class="question-text">
+        <h3>When&rsquo;s the last time you actually visited our website?</h3>
+        <p>Would you be proud to show it to a customer? A competitor?</p>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- ============================================
-     OLD VS NEW COMPARISON
-     ============================================ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-label">Before vs. After</div>
-    <h2>The Current Website vs. The New Website</h2>
-    <p class="section-lead">A side-by-side comparison of what the current vendor provides versus what we&rsquo;ve already built &mdash; ready to launch.</p>
+    <div class="question-item">
+      <div class="question-num">3</div>
+      <div class="question-text">
+        <h3>What if I told you I&rsquo;ve already built something better &mdash; for free?</h3>
+        <p>And I can launch it in 7 days, cancel the $300 vendor, and run it in-house.</p>
+      </div>
+    </div>
+
+    <div class="visual-cue">
+      <div class="visual-cue-icon">👀</div>
+      <div class="visual-cue-text">
+        Let me show you both sites right now.
+        <small>Old site vs. new site &mdash; you decide.</small>
+      </div>
+    </div>
+
+    <div class="demo-callout">
+      <strong>LIVE DEMO MOMENT:</strong> Pull up the current website next to <span class="demo-url">dealerplateguy.github.io/CRC-Website</span> on your laptop or phone. The difference sells itself.
+    </div>
+  </section>
+
+  <!-- ===== COMPARISON TABLE ===== -->
+  <section class="comparison-section avoid-break">
+    <div class="section-label">The Comparison</div>
+    <h2>Current vendor vs. what I&rsquo;ve built.</h2>
 
     <table class="comparison">
       <thead>
@@ -649,376 +374,72 @@
         <tr>
           <td class="feature">Total Pages</td>
           <td class="before-cell"><span class="x">&#10007;</span>Handful of generic pages</td>
-          <td class="after-cell"><span class="check">&#10003;</span>29 fully-built pages</td>
+          <td class="after-cell"><span class="check">&#10003;</span>31 fully-built pages</td>
         </tr>
         <tr>
           <td class="feature">Individual Service Pages</td>
-          <td class="before-cell"><span class="x">&#10007;</span>One generic &ldquo;Services&rdquo; page</td>
-          <td class="after-cell"><span class="check">&#10003;</span>8 dedicated pages (each 800-2,500 words)</td>
+          <td class="before-cell"><span class="x">&#10007;</span>One generic page</td>
+          <td class="after-cell"><span class="check">&#10003;</span>8 dedicated pages, 800-2,500 words each</td>
         </tr>
         <tr>
-          <td class="feature">Local SEO</td>
-          <td class="before-cell"><span class="x">&#10007;</span>Lafayette-only mentions</td>
-          <td class="after-cell"><span class="check">&#10003;</span>Lafayette + West Lafayette + 9 surrounding cities</td>
-        </tr>
-        <tr>
-          <td class="feature">Dedicated Service Area Page</td>
+          <td class="feature">Blog / Content Marketing</td>
           <td class="before-cell"><span class="x">&#10007;</span>None</td>
-          <td class="after-cell"><span class="check">&#10003;</span>Targeting Crawfordsville, Frankfort, Kokomo, Delphi, etc.</td>
+          <td class="after-cell"><span class="check">&#10003;</span>11 long-form SEO blog posts</td>
         </tr>
         <tr>
-          <td class="feature">Blog &amp; Content Marketing</td>
-          <td class="before-cell"><span class="x">&#10007;</span>No blog</td>
-          <td class="after-cell"><span class="check">&#10003;</span>10 long-form SEO blog posts already published</td>
+          <td class="feature">West Lafayette / Purdue Focus</td>
+          <td class="before-cell"><span class="x">&#10007;</span>None</td>
+          <td class="after-cell"><span class="check">&#10003;</span>Dedicated landing page + Purdue student guide</td>
         </tr>
         <tr>
-          <td class="feature">Schema / Structured Data</td>
-          <td class="before-cell"><span class="x">&#10007;</span>Minimal or none</td>
-          <td class="after-cell"><span class="check">&#10003;</span>AutoBodyShop, Service, FAQ, Review, Breadcrumb, Blog schema on every page</td>
-        </tr>
-        <tr>
-          <td class="feature">24/7 Online Estimates</td>
-          <td class="before-cell"><span class="x">&#10007;</span>Not featured prominently</td>
-          <td class="after-cell"><span class="check">&#10003;</span>CTA on every page + dedicated homepage banner</td>
-        </tr>
-        <tr>
-          <td class="feature">Mobile Experience</td>
-          <td class="before-cell"><span class="x">&#10007;</span>Basic responsive</td>
-          <td class="after-cell"><span class="check">&#10003;</span>Built mobile-first with floating CTAs, dropdown menus</td>
+          <td class="feature">Local SEO Reach</td>
+          <td class="before-cell"><span class="x">&#10007;</span>Lafayette only</td>
+          <td class="after-cell"><span class="check">&#10003;</span>Lafayette, W. Lafayette + 9 surrounding cities</td>
         </tr>
         <tr>
           <td class="feature">Spanish Version</td>
           <td class="before-cell"><span class="x">&#10007;</span>None</td>
-          <td class="after-cell"><span class="check">&#10003;</span>Full Spanish homepage with hreflang tags</td>
+          <td class="after-cell"><span class="check">&#10003;</span>Full Spanish homepage</td>
         </tr>
         <tr>
-          <td class="feature">Navigation</td>
-          <td class="before-cell"><span class="x">&#10007;</span>Flat menu</td>
-          <td class="after-cell"><span class="check">&#10003;</span>Dropdowns for Services (8 items) and About (3 items)</td>
+          <td class="feature">Schema / Google Rich Results</td>
+          <td class="before-cell"><span class="x">&#10007;</span>Minimal or none</td>
+          <td class="after-cell"><span class="check">&#10003;</span>Full schema on every page</td>
         </tr>
         <tr>
-          <td class="feature">Team Showcase</td>
-          <td class="before-cell"><span class="x">&#10007;</span>None</td>
-          <td class="after-cell"><span class="check">&#10003;</span>Meet the Team section with staff profiles</td>
-        </tr>
-        <tr>
-          <td class="feature">Customer Reviews</td>
-          <td class="before-cell"><span class="x">&#10007;</span>Static, no schema</td>
-          <td class="after-cell"><span class="check">&#10003;</span>8 reviews with individual schema markup (rich snippets)</td>
-        </tr>
-        <tr>
-          <td class="feature">Analytics Built-In</td>
-          <td class="before-cell"><span class="x">&#10007;</span>Vendor-controlled, limited access</td>
-          <td class="after-cell"><span class="check">&#10003;</span>GA4 + Microsoft Clarity heatmaps + Search Console ready</td>
+          <td class="feature">Analytics Access</td>
+          <td class="before-cell"><span class="x">&#10007;</span>Vendor controls it</td>
+          <td class="after-cell"><span class="check">&#10003;</span>GA4 + heatmaps + Search Console</td>
         </tr>
         <tr>
           <td class="feature">Speed to Make Changes</td>
           <td class="before-cell"><span class="x">&#10007;</span>Submit ticket, wait days</td>
-          <td class="after-cell"><span class="check">&#10003;</span>Same-day updates, pushed instantly</td>
+          <td class="after-cell"><span class="check">&#10003;</span>Same-day updates</td>
         </tr>
-        <tr>
-          <td class="feature">Privacy Policy</td>
-          <td class="before-cell"><span class="x">&#10007;</span>Placeholder or none</td>
-          <td class="after-cell"><span class="check">&#10003;</span>Full legal-ready privacy policy</td>
-        </tr>
-        <tr>
+        <tr class="total">
           <td class="feature">Annual Cost</td>
-          <td class="before-cell"><span class="x">&#10007;</span><strong>$3,600</strong></td>
-          <td class="after-cell"><span class="check">&#10003;</span><strong>~$60 (domains only)</strong></td>
+          <td class="before-cell"><span class="x">&#10007;</span>$3,600</td>
+          <td class="after-cell"><span class="check">&#10003;</span>~$60 (domains only)</td>
         </tr>
       </tbody>
     </table>
-  </div>
-</section>
+  </section>
 
-<!-- ============================================
-     THE NUMBERS
-     ============================================ -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">The Numbers</div>
-    <h2>Stop paying $300/month. Start saving.</h2>
-    <p class="section-lead">The new site runs on enterprise-grade infrastructure (the same used by Fortune 500 companies) at zero hosting cost. The only recurring spend is for defensive domain registrations.</p>
-
-    <div class="pricing-grid">
-      <div class="pricing-card old">
-        <span class="badge">Current Setup</span>
-        <h3>Outside Vendor</h3>
-        <div class="pricing-big">$3,600</div>
-        <div class="pricing-period">per year ($300/month)</div>
-        <ul class="pricing-list">
-          <li>Slow update turnaround</li>
-          <li>No dedicated SEO strategy</li>
-          <li>No blog or content marketing</li>
-          <li>Limited analytics access</li>
-          <li>No service-area expansion</li>
-          <li>No Spanish version</li>
-        </ul>
-      </div>
-
-      <div class="pricing-card new">
-        <span class="badge">Proposed Setup</span>
-        <h3>In-House Control</h3>
-        <div class="pricing-big">$60</div>
-        <div class="pricing-period">per year (domains only)</div>
-        <ul class="pricing-list">
-          <li>Free enterprise hosting (Cloudflare)</li>
-          <li>Same-day changes, unlimited updates</li>
-          <li>Full SEO optimization baked in</li>
-          <li>GA4 + Clarity heatmaps + Search Console</li>
-          <li>Blog &amp; content strategy owned in-house</li>
-          <li>10x faster page loads</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="callout" style="margin-top: 1.5rem;">
-      <div class="callout-label">Net Savings Year 1</div>
-      <div class="callout-big">$3,540 saved in the first 12 months.</div>
-      <div class="callout-small">Over 5 years, that&rsquo;s $17,700 that stays in the business &mdash; enough to fund a full-time marketing person, hundreds of Google Ads leads, or capital improvements to the shop.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     WHY THIS MATTERS - SEO DOMINANCE
-     ============================================ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-label">Why It Matters</div>
-    <h2>Every customer search in Lafayette should end on our website.</h2>
-    <p class="section-lead">When someone in Tippecanoe County Googles &ldquo;collision repair near me&rdquo; at 10pm after an accident, they shouldn&rsquo;t be finding a competitor. They should be finding us &mdash; and submitting photos for a free estimate in under 2 minutes.</p>
-
-    <div class="feature-grid">
-      <div class="feature">
-        <h4>Local Search Dominance</h4>
-        <p>Ranking for &ldquo;collision repair Lafayette IN,&rdquo; &ldquo;auto body shop West Lafayette,&rdquo; &ldquo;hail damage Tippecanoe County&rdquo; &mdash; and every service + city combination.</p>
-      </div>
-      <div class="feature">
-        <h4>24/7 Lead Capture</h4>
-        <p>The online photo estimate tool is now featured on every page. Accidents don&rsquo;t happen 9-to-5 &mdash; our website shouldn&rsquo;t either.</p>
-      </div>
-      <div class="feature">
-        <h4>Google Rich Results</h4>
-        <p>Structured data means Google shows our star ratings, FAQs, and business info directly in search results. Competitors look like plain links next to us.</p>
-      </div>
-      <div class="feature">
-        <h4>Content That Ranks for Years</h4>
-        <p>10 blog posts targeting high-intent searches like &ldquo;what to do after a car accident&rdquo; drive free traffic month after month.</p>
-      </div>
-      <div class="feature">
-        <h4>Mobile-First Experience</h4>
-        <p>75% of auto repair searches happen on a phone. Our site is built mobile-first with one-tap call, estimate, and booking buttons.</p>
-      </div>
-      <div class="feature">
-        <h4>Expansion Beyond Lafayette</h4>
-        <p>Dedicated pages for Crawfordsville, Frankfort, Kokomo, Monticello, Delphi, Attica, Logansport, Lebanon &mdash; targeting 45 minutes out in every direction.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     DOMAIN STRATEGY
-     ============================================ -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">Domain Strategy</div>
-    <h2>Defend the brand. Capture the traffic.</h2>
-    <p class="section-lead">We already own <strong>rohrmanbodyshop.com</strong>. I&rsquo;m recommending we spend ~$60 to lock down the surrounding domain variants. Competitors, scammers, and typos all get redirected to our main site.</p>
-
-    <table class="domain-table">
-      <thead>
-        <tr>
-          <th>Domain</th>
-          <th>Priority</th>
-          <th>Why We Need It</th>
-          <th style="text-align: right;">Cost/yr</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="domain-name">rohrmanbodyshop.com</span></td>
-          <td><span class="priority-badge priority-must">Own</span></td>
-          <td>Current primary domain (keep as canonical).</td>
-          <td style="text-align: right;">—</td>
-        </tr>
-        <tr>
-          <td><span class="domain-name">lafayettecollisionrepair.com</span></td>
-          <td><span class="priority-badge priority-must">Must Buy</span></td>
-          <td>Exact-match local keyword. Pure gold for SEO.</td>
-          <td style="text-align: right;">~$12</td>
-        </tr>
-        <tr>
-          <td><span class="domain-name">bobrohrmancollision.com</span></td>
-          <td><span class="priority-badge priority-must">Must Buy</span></td>
-          <td>Matches our Google Business Profile name.</td>
-          <td style="text-align: right;">~$12</td>
-        </tr>
-        <tr>
-          <td><span class="domain-name">rohrmancollision.com</span></td>
-          <td><span class="priority-badge priority-must">Must Buy</span></td>
-          <td>Matches our legal business name.</td>
-          <td style="text-align: right;">~$12</td>
-        </tr>
-        <tr>
-          <td><span class="domain-name">rohrmanbodyshop.net</span></td>
-          <td><span class="priority-badge priority-must">Must Buy</span></td>
-          <td>Catches typos. Blocks competitors from buying it.</td>
-          <td style="text-align: right;">~$15</td>
-        </tr>
-        <tr>
-          <td><span class="domain-name">rohrmanautobody.com</span></td>
-          <td><span class="priority-badge priority-strong">Recommended</span></td>
-          <td>Another keyword variation. Defensive play.</td>
-          <td style="text-align: right;">~$12</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="highlight-box">
-      <p style="margin-bottom: 0;"><strong>How it works:</strong> All secondary domains 301-redirect to rohrmanbodyshop.com. Google treats them all as one site, passing any SEO value to our main domain. A single Cloudflare configuration handles this &mdash; no separate sites to manage.</p>
-    </div>
-
-    <p style="margin-top: 1rem; font-size: 10pt; color: var(--text-light);"><strong>Total Year 1 investment: ~$63 for 5 defensive domains.</strong> This protects the Rohrman brand for decades to come.</p>
-  </div>
-</section>
-
-<!-- ============================================
-     WHAT WE DELIVER
-     ============================================ -->
-<section class="section section-dark">
-  <div class="container">
-    <div class="section-label">What&rsquo;s Included</div>
-    <h2 style="color: white;">Everything the current vendor provides &mdash; plus what they don&rsquo;t.</h2>
-    <p style="color: #cbd5e1; max-width: 6.5in; margin-bottom: 1.5rem; font-size: 12pt;">The new site is already built. It&rsquo;s 29 pages, fully SEO-optimized, mobile-first, with enterprise-grade hosting. Here&rsquo;s what ongoing management covers.</p>
-
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+  <!-- ===== THE ASK ===== -->
+  <section class="avoid-break">
+    <div class="the-ask">
       <div>
-        <h3 style="color: white;">Website Management</h3>
-        <ul class="simple" style="color: #cbd5e1;">
-          <li>Hosting &amp; security (Cloudflare enterprise CDN)</li>
-          <li>Same-day content updates</li>
-          <li>Monthly performance reports</li>
-          <li>Ongoing SEO optimization</li>
-          <li>New blog posts (2 per month)</li>
-          <li>Photo &amp; video integration as you capture them</li>
-        </ul>
+        <div class="the-ask-label">The Ask</div>
+        <h2>Let me cancel the vendor and take it in-house.</h2>
+        <p>Approve ~$60 for defensive domains. Give 30 days notice. I handle everything from there.</p>
       </div>
-      <div>
-        <h3 style="color: white;">Analytics &amp; Insight</h3>
-        <ul class="simple" style="color: #cbd5e1;">
-          <li>Google Analytics 4 dashboards</li>
-          <li>Microsoft Clarity session recordings + heatmaps</li>
-          <li>Google Search Console reporting</li>
-          <li>Cloudflare Web Analytics (Core Web Vitals)</li>
-          <li>Monthly ranking reports by keyword</li>
-          <li>Conversion tracking (estimates submitted)</li>
-        </ul>
+      <div class="savings-badge">
+        <span class="big">$3,540</span>
+        <span class="small">Saved Year 1</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============================================
-     ROLLOUT PLAN
-     ============================================ -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">Rollout Plan</div>
-    <h2>We can go live in 7 days.</h2>
-    <p class="section-lead">The new site is already built and production-ready. Here&rsquo;s the exact timeline to go live with zero downtime.</p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <h4>Day 1 &mdash; Go/No-Go Decision</h4>
-        <p>CEO approval to proceed. Purchase the 5 defensive domains (~$60 total).</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 2-3 &mdash; Cloudflare Setup</h4>
-        <p>Deploy the site to Cloudflare Pages. Configure all 6 domains with SSL certificates. Zero cost, all domains live with HTTPS.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 4 &mdash; Analytics Install</h4>
-        <p>Set up Google Analytics 4, Microsoft Clarity, Google Search Console, and Cloudflare Web Analytics. Submit the new sitemap to Google and Bing.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 5 &mdash; Soft Launch on Staging URL</h4>
-        <p>Final QA round. CEO + team review the live staging version. Approve.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 6 &mdash; Cutover</h4>
-        <p>Point rohrmanbodyshop.com to the new site. Cancel the $300/month vendor contract. 301 redirects configured for all secondary domains.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 7+ &mdash; Growth Phase</h4>
-        <p>Begin weekly content updates, photo shoots, and SEO monitoring. First monthly performance report delivered at 30 days.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     WHY ME
-     ============================================ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-label">Why In-House</div>
-    <h2>The vendor doesn&rsquo;t have skin in the game. I do.</h2>
-
-    <ol class="numbered">
-      <li>
-        <strong>I work here.</strong>
-        <span>Every decision is made with Bob Rohrman Auto Group&rsquo;s interests first &mdash; not a vendor&rsquo;s billable hours.</span>
-      </li>
-      <li>
-        <strong>Speed of execution.</strong>
-        <span>Need a new promotion live today? Done. Changed your hours? Updated in five minutes. No tickets, no waiting.</span>
-      </li>
-      <li>
-        <strong>Deep local knowledge.</strong>
-        <span>I know Lafayette, Tippecanoe County, and our customer base. The new site reflects that.</span>
-      </li>
-      <li>
-        <strong>Already delivered.</strong>
-        <span>You&rsquo;re not betting on promises &mdash; the site is already built and ready to launch. You can see it today.</span>
-      </li>
-      <li>
-        <strong>Transparent metrics.</strong>
-        <span>You get full admin access to every analytics platform. No gatekeeping, no black boxes.</span>
-      </li>
-      <li>
-        <strong>Scale to the rest of the group.</strong>
-        <span>If this works for Collision Repair, the same framework can lift the entire Bob Rohrman Auto Group&rsquo;s digital presence.</span>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ============================================
-     FINAL ASK
-     ============================================ -->
-<section class="section">
-  <div class="container">
-    <div class="final-ask">
-      <h2>The Ask</h2>
-      <p>Approve the switch to in-house website management. Authorize ~$60 for defensive domain purchases. Cancel the $300/month outside vendor.</p>
-      <div class="big-ask">Saving $3,540 per year starting next month.</div>
-    </div>
-
-    <div class="callout" style="margin-top: 2rem;">
-      <div class="callout-label">What I Need From You</div>
-      <div class="callout-big" style="font-size: 14pt;">A yes &mdash; and 30 days of notice to the current vendor.</div>
-      <div class="callout-small">I&rsquo;ll handle the technical migration, DNS changes, domain purchases, analytics setup, and the ongoing operation. You&rsquo;ll see the first monthly performance report within 30 days of launch.</div>
-    </div>
-  </div>
-</section>
-
-<div class="footer-note">
-  <div class="container">
-    Confidential Proposal &mdash; Prepared for the CEO of Bob Rohrman Auto Group &mdash; April 2026<br>
-    Bob Rohrman Collision Repair Center &mdash; 3400 National Drive, Lafayette, IN 47905 &mdash; (765) 448-1100
-  </div>
 </div>
 
 </body>
