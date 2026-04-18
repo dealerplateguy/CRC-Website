@@ -37,6 +37,66 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../css/style.css">
 
+  <style>
+  .contact-form-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+  }
+  .contact-form-card .form-group {
+    margin-bottom: 1rem;
+  }
+  .contact-form-card .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .contact-form-card label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--primary);
+    margin-bottom: 0.35rem;
+  }
+  .contact-form-card label .required {
+    color: #dc2626;
+  }
+  .contact-form-card input[type="text"],
+  .contact-form-card input[type="email"],
+  .contact-form-card input[type="tel"],
+  .contact-form-card textarea,
+  .contact-form-card select {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    background: #fafbfc;
+    transition: all 0.2s ease;
+  }
+  .contact-form-card input:focus,
+  .contact-form-card textarea:focus,
+  .contact-form-card select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(232, 145, 45, 0.1);
+  }
+  .contact-form-card textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  .contact-map-full {
+    margin-top: 3rem;
+  }
+  @media (max-width: 640px) {
+    .contact-form-card .form-row { grid-template-columns: 1fr; }
+  }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,7 +104,7 @@
     "name": "Bob Rohrman Collision Repair Center",
     "url": "https://www.rohrmanbodyshop.com",
     "telephone": "(765) 448-1100",
-    "email": "collision@rohrmanAUTO.com",
+    "email": "collision@rohrmanauto.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "3400 National Drive",
@@ -86,13 +146,13 @@
     gtag('config', 'G-6BBMN1LD9F');
   </script>
 
-  <!-- Microsoft Clarity - Replace REPLACE_WITH_YOUR_CLARITY_ID with your Project ID -->
+  <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "REPLACE_WITH_YOUR_CLARITY_ID");
+    })(window, document, "clarity", "script", "wdms7sizju");
   </script>
 </head>
 <body>
@@ -228,7 +288,7 @@
             </div>
             <div>
               <h3>Email</h3>
-              <a href="mailto:collision@rohrmanAUTO.com">collision@rohrmanAUTO.com</a>
+              <a href="mailto:collision@rohrmanauto.com">collision@rohrmanauto.com</a>
             </div>
           </div>
 
@@ -261,7 +321,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
               Get Directions
             </a>
-            <a href="mailto:collision@rohrmanAUTO.com" class="btn btn-outline">
+            <a href="mailto:collision@rohrmanauto.com" class="btn btn-outline">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               Email Us
             </a>
@@ -269,22 +329,74 @@
 
         </div>
 
-        <!-- Right Column: Map -->
-        <div class="contact-map">
-          <div class="map-placeholder" style="border-radius: 12px; height: 400px; overflow: hidden;">
-            <iframe
-              src="https://www.google.com/maps?q=Bob+Rohrman+Collision+Repair+Center+3400+National+Dr+Lafayette+IN+47905&output=embed"
-              width="100%"
-              height="400"
-              style="border:0; border-radius: 12px;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Bob Rohrman Collision Repair Center Location">
-            </iframe>
-          </div>
+        <!-- Right Column: Contact Form -->
+        <div class="contact-form-card">
+          <h2 style="margin-bottom: 0.5rem; font-family: 'Montserrat', sans-serif; font-size: 1.5rem;">Send Us a Message</h2>
+          <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.5rem;">Have a question? Fill out the form below and we&rsquo;ll get back to you within 24 hours.</p>
+
+          <form id="contactForm" action="https://formsubmit.co/collision@rohrmanauto.com" method="POST">
+            <input type="hidden" name="_subject" value="New contact form submission from website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://www.rohrmanbodyshop.com/pages/thank-you.html">
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting Bob Rohrman Collision Repair Center. We have received your message and will respond within 24 hours. For immediate assistance, please call us at (765) 448-1100.">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Name <span class="required">*</span></label>
+                <input type="text" name="Name" required placeholder="John Smith">
+              </div>
+              <div class="form-group">
+                <label>Phone <span class="required">*</span></label>
+                <input type="tel" name="Phone" required placeholder="(765) 123-4567">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Email <span class="required">*</span></label>
+              <input type="email" name="Email" required placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+              <label>Subject <span class="required">*</span></label>
+              <select name="Subject" required>
+                <option value="">Select a topic...</option>
+                <option value="General Question">General Question</option>
+                <option value="Estimate Request">Estimate Request</option>
+                <option value="Appointment Request">Appointment Request</option>
+                <option value="Insurance Claim">Insurance Claim</option>
+                <option value="Status of Current Repair">Status of Current Repair</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Message <span class="required">*</span></label>
+              <textarea name="Message" required placeholder="Tell us how we can help..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message</button>
+
+            <p style="text-align: center; font-size: 0.85rem; color: var(--text-light); margin-top: 1rem;">We respond within 24 hours. Your information is secure.</p>
+          </form>
         </div>
 
+      </div>
+
+      <!-- Full-width Map -->
+      <div class="contact-map-full">
+        <div class="map-placeholder" style="border-radius: 12px; height: 400px; overflow: hidden;">
+          <iframe
+            src="https://www.google.com/maps?q=Bob+Rohrman+Collision+Repair+Center+3400+National+Dr+Lafayette+IN+47905&output=embed"
+            width="100%"
+            height="400"
+            style="border:0; border-radius: 12px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Bob Rohrman Collision Repair Center Location">
+          </iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -385,7 +497,7 @@
           </div>
           <div style="margin-top: 1rem;">
             <p style="margin-bottom: 0.35rem;"><a href="tel:7654481100" style="color: #CBD5E1;">(765) 448-1100</a></p>
-            <p style="margin-bottom: 0.35rem;"><a href="mailto:collision@rohrmanAUTO.com" style="color: #CBD5E1;">collision@rohrmanAUTO.com</a></p>
+            <p style="margin-bottom: 0.35rem;"><a href="mailto:collision@rohrmanauto.com" style="color: #CBD5E1;">collision@rohrmanauto.com</a></p>
             <p style="margin-bottom: 0;"><span style="color: #94A3B8;">3400 National Drive<br>Lafayette, IN 47905</span></p>
           </div>
         </div>

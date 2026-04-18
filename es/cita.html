@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../favicon-black.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="../favicon-white.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="../favicon-black.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar una Cita | Bob Rohrman Collision Repair Center</title>
+  <meta name="description" content="Solicite una cita para una estimación en persona. Horarios disponibles de lunes a viernes de 8am a 4pm.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.rohrmanbodyshop.com/es/cita.html">
+  <link rel="alternate" hreflang="en" href="https://www.rohrmanbodyshop.com/">
+  <link rel="alternate" hreflang="es" href="https://www.rohrmanbodyshop.com/es/cita.html">
+
+  <meta property="og:title" content="Solicitar una Cita | Bob Rohrman Collision Repair">
+  <meta property="og:description" content="Solicite una cita para una estimación en persona.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_US">
+  <meta property="og:image" content="https://www.rohrmanbodyshop.com/images/RAG%20collision%20final.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .form-page {
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .form-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
+    .form-hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .form-hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .form-hero p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+    .form-group label .required {
+      color: var(--danger, #dc2626);
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="date"],
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      background: #fafbfc;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: white;
+      box-shadow: 0 0 0 3px rgba(232, 145, 45, 0.1);
+    }
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+      font-family: 'Inter', sans-serif;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+      .form-card { padding: 1.5rem; }
+    }
+    .form-submit {
+      width: 100%;
+      padding: 1rem 2rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover {
+      background: var(--accent-hover, #D07A1F);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(232, 145, 45, 0.3);
+    }
+    .form-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 1rem;
+    }
+    .info-banner {
+      background: var(--accent-light, #fff8ed);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .info-banner strong { color: var(--accent); }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      text-decoration: none;
+    }
+    .back-link:hover { color: var(--accent); }
+    .mini-header {
+      background: var(--primary);
+      padding: 1rem 0;
+      border-bottom: 3px solid var(--accent);
+    }
+    .mini-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mini-header .logo img {
+      height: 40px;
+      width: auto;
+    }
+    .mini-header .contact-bar {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      color: white;
+      font-size: 0.9rem;
+    }
+    .mini-header .contact-bar a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .mini-header .contact-bar a:hover { color: var(--accent); }
+    @media (max-width: 640px) {
+      .mini-header .contact-bar span { display: none; }
+    }
+    .error-msg {
+      display: none;
+      color: var(--danger, #dc2626);
+      font-size: 0.85rem;
+      margin-top: 0.4rem;
+      font-weight: 500;
+    }
+    .error-msg.show { display: block; }
+    .hours-note {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 0.35rem;
+    }
+  </style>
+
+  <!-- ===== ANALYTICS ===== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BBMN1LD9F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6BBMN1LD9F');
+  </script>
+</head>
+<body>
+
+  <header class="mini-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="../images/RAG collision light.png" alt="Bob Rohrman Collision Repair Center - Lafayette, Indiana">
+      </a>
+      <div class="contact-bar">
+        <a href="tel:7654481100">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>(765) 448-1100</span>
+        </a>
+        <a href="../index.html" class="lang-switch">English</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="form-page">
+    <a href="index.html" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Regresar
+    </a>
+
+    <div class="form-card">
+      <div class="form-hero">
+        <h1>Solicitar una Cita</h1>
+        <p>Reserve una cita para una estimación en persona. Nuestro equipo confirmará su cita dentro de 24 horas.</p>
+      </div>
+
+      <div class="info-banner">
+        <strong>Horarios disponibles:</strong> Lunes a Viernes, 8:00 AM a 4:00 PM. Sábados y domingos cerrado. Su cita será confirmada por teléfono o correo electrónico dentro de 24 horas.
+      </div>
+
+      <form id="appointmentForm" action="https://formsubmit.co/collision@rohrmanauto.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva solicitud de cita (Español)">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.rohrmanbodyshop.com/es/gracias-cita.html">
+        <input type="hidden" name="_autoresponse" value="Gracias por solicitar una cita con Bob Rohrman Collision Repair Center. Hemos recibido su solicitud y confirmaremos su cita dentro de 24 horas por teléfono o correo electrónico. Si necesita asistencia inmediata, por favor llámenos al (765) 448-1100. --- Thank you for requesting an appointment with Bob Rohrman Collision Repair Center. We have received your request and will confirm your appointment within 24 hours by phone or email. For immediate assistance, please call us at (765) 448-1100.">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre Completo <span class="required">*</span></label>
+            <input type="text" name="Nombre" required placeholder="Juan Pérez">
+          </div>
+          <div class="form-group">
+            <label>Teléfono <span class="required">*</span></label>
+            <input type="tel" name="Telefono" required placeholder="(765) 123-4567">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Correo Electrónico <span class="required">*</span></label>
+          <input type="email" name="Correo" required placeholder="correo@ejemplo.com">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Año del Vehículo <span class="required">*</span></label>
+            <input type="text" name="Año" required placeholder="2021">
+          </div>
+          <div class="form-group">
+            <label>Marca y Modelo <span class="required">*</span></label>
+            <input type="text" name="Marca_Modelo" required placeholder="Honda Civic">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Fecha Preferida <span class="required">*</span></label>
+            <input type="date" name="Fecha" id="fechaInput" required>
+            <div class="hours-note">Solo se permiten días entre semana (lunes a viernes)</div>
+            <div class="error-msg" id="dateError">Por favor seleccione un día de lunes a viernes.</div>
+          </div>
+          <div class="form-group">
+            <label>Hora Preferida <span class="required">*</span></label>
+            <select name="Hora" required>
+              <option value="">Seleccione una hora...</option>
+              <option value="8:00 AM">8:00 AM</option>
+              <option value="9:00 AM">9:00 AM</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="1:00 PM">1:00 PM</option>
+              <option value="2:00 PM">2:00 PM</option>
+              <option value="3:00 PM">3:00 PM</option>
+              <option value="4:00 PM">4:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Descripción Breve del Daño o Servicio <span class="required">*</span></label>
+          <textarea name="Descripcion" required placeholder="Describa brevemente el daño o servicio que necesita..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Notas Adicionales (Opcional)</label>
+          <textarea name="Notas" placeholder="Información adicional, preferencias especiales, etc."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Solicitar Cita</button>
+
+        <p class="form-note">Confirmaremos su cita dentro de 24 horas. Sus datos están seguros.</p>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Set minimum date to today
+    const fechaInput = document.getElementById('fechaInput');
+    const dateError = document.getElementById('dateError');
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    fechaInput.min = `${year}-${month}-${day}`;
+
+    // Prevent weekends
+    fechaInput.addEventListener('change', function() {
+      const selected = new Date(this.value + 'T12:00:00');
+      const dayOfWeek = selected.getDay();
+      if (dayOfWeek === 0 || dayOfWeek === 6) {
+        dateError.classList.add('show');
+        this.value = '';
+      } else {
+        dateError.classList.remove('show');
+      }
+    });
+
+    // Validate on submit
+    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+      const selected = new Date(fechaInput.value + 'T12:00:00');
+      const dayOfWeek = selected.getDay();
+      if (dayOfWeek === 0 || dayOfWeek === 6 || !fechaInput.value) {
+        e.preventDefault();
+        dateError.classList.add('show');
+        fechaInput.focus();
+      }
+    });
+  </script>
+</body>
+</html>
