@@ -914,6 +914,29 @@ p {
   border: 1px solid var(--border);
   position: relative;
   overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-card:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover .service-card-link {
+  transform: translateX(4px);
 }
 
 .service-card::before {
@@ -1015,6 +1038,37 @@ p {
 
 @media (max-width: 768px) {
   .why-choose-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Purdue / West Lafayette Section --- */
+.purdue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.purdue-card {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-radius: 16px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94A3B8;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .purdue-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .purdue-card {
+    aspect-ratio: 16/10;
+    max-width: 100%;
+  }
 }
 
 /* --- 24/7 Estimates Banner --- */
