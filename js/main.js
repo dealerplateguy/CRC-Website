@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '<div class="hours-row"><strong>Mon &ndash; Thu</strong><span>7:30 AM &ndash; 5:00 PM</span></div>' +
         '<div class="hours-row"><strong>Friday</strong><span>7:30 AM &ndash; 6:00 PM</span></div>' +
         '<div class="hours-row"><strong>Sat &ndash; Sun</strong><span>Closed</span></div>' +
-        '<div class="hours-note">Online photo estimates 24/7</div>' +
+        '<a class="hours-note" href="https://www.carwise.com/online-photo-estimate/rohrman-auto-collision-repair-center-lafayette-in-47905/472202?source=search.results" target="_blank" rel="noopener" data-event="hours_estimate">Online photo estimates 24/7 &rarr;</a>' +
       '</div>';
     left.replaceWith(actions);
 

@@ -2232,6 +2232,7 @@ p {
 .top-bar-hours-panel .hours-row span { color: #555; }
 
 .top-bar-hours-panel .hours-note {
+  display: block;
   margin-top: 0.75rem;
   padding-top: 0.6rem;
   border-top: 1px solid #eee;
@@ -2239,6 +2240,13 @@ p {
   color: var(--accent);
   font-weight: 600;
   text-align: center;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.top-bar-hours-panel a.hours-note:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
 @keyframes topBarHoursIn {
