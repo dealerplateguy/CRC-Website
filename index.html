@@ -79,10 +79,16 @@
       "ratingValue": "4.8",
       "reviewCount": "200"
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "Lafayette"
-    },
+    "areaServed": [
+      { "@type": "City", "name": "Lafayette", "sameAs": "https://en.wikipedia.org/wiki/Lafayette,_Indiana" },
+      { "@type": "City", "name": "West Lafayette", "sameAs": "https://en.wikipedia.org/wiki/West_Lafayette,_Indiana" },
+      { "@type": "AdministrativeArea", "name": "Tippecanoe County, Indiana" },
+      { "@type": "PostalCodeSpecification", "postalCode": "47901", "addressCountry": "US" },
+      { "@type": "PostalCodeSpecification", "postalCode": "47902", "addressCountry": "US" },
+      { "@type": "PostalCodeSpecification", "postalCode": "47905", "addressCountry": "US" },
+      { "@type": "PostalCodeSpecification", "postalCode": "47906", "addressCountry": "US" },
+      { "@type": "PostalCodeSpecification", "postalCode": "47907", "addressCountry": "US" }
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Collision Repair Services",
@@ -594,11 +600,6 @@
               <td>Select Companies</td>
             </tr>
             <tr>
-              <td>OEM Certified (Honda/Acura)</td>
-              <td class="highlight-col"><span class="check">&#10003; ProFirst</span></td>
-              <td><span class="cross">&#10007;</span></td>
-            </tr>
-            <tr>
               <td>Dedicated Repair Advisor</td>
               <td class="highlight-col"><span class="check">&#10003;</span></td>
               <td><span class="cross">&#10007;</span></td>
@@ -733,11 +734,6 @@
           <div class="cert-badge-icon">I-CAR<br>GOLD</div>
           <span>I-CAR Gold Class</span>
           <p>Highest training achievement in the collision repair industry.</p>
-        </div>
-        <div class="cert-badge">
-          <div class="cert-badge-icon">HONDA<br>ACURA<br>ProFirst</div>
-          <span>ProFirst Certified</span>
-          <p>Factory-certified to repair Honda and Acura vehicles to OEM standards.</p>
         </div>
         <div class="cert-badge">
           <div class="cert-badge-icon">ASE</div>
@@ -955,7 +951,8 @@
           <div style="margin-top: 1rem;">
             <p style="margin-bottom: 0.35rem;"><a href="tel:7654481100" style="color: #CBD5E1;">(765) 448-1100</a></p>
             <p style="margin-bottom: 0.35rem;"><a href="pages/contact.html#contactForm" style="color: #CBD5E1;">collision@rohrmanauto.com</a></p>
-            <p style="margin-bottom: 0;"><span style="color: #94A3B8;">3400 National Drive<br>Lafayette, IN 47905</span></p>
+            <p style="margin-bottom: 0.35rem;"><span style="color: #94A3B8;">3400 National Drive<br>Lafayette, IN 47905</span></p>
+            <p style="margin-bottom: 0; font-size: 0.8rem; color: #94A3B8;">Serving Tippecanoe County ZIP codes: 47901, 47902, 47905, 47906, 47907</p>
           </div>
         </div>
       </div>
