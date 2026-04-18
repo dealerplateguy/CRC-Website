@@ -5,6 +5,121 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+  // --- Actionable Top Bar ---
+  (function enhanceTopBar() {
+    const bar = document.querySelector('.top-bar');
+    if (!bar) return;
+    const container = bar.querySelector('.container');
+    const left = bar.querySelector('.top-bar-left');
+    const right = bar.querySelector('.top-bar-right');
+    if (!container || !left) return;
+
+    const telLink = left.querySelector('a[href^="tel:"]');
+    const mapLink = left.querySelector('a[href*="maps.google"]');
+    const telHref = telLink ? telLink.getAttribute('href') : 'tel:7654481100';
+    const mapHref = mapLink ? mapLink.getAttribute('href') : 'https://maps.google.com/?q=3400+National+Drive+Lafayette+IN+47905';
+
+    const actions = document.createElement('div');
+    actions.className = 'top-bar-actions';
+    actions.innerHTML =
+      '<a href="' + telHref + '" class="top-bar-btn top-bar-btn-call" data-event="topbar_call">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>' +
+        '<span>Call</span>' +
+      '</a>' +
+      '<a href="' + mapHref + '" target="_blank" rel="noopener" class="top-bar-btn" data-event="topbar_directions">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+        '<span>Directions</span>' +
+      '</a>' +
+      '<button type="button" class="top-bar-btn top-bar-hours-toggle" aria-expanded="false" aria-controls="top-bar-hours-panel">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' +
+        '<span>Hours</span>' +
+        '<svg class="top-bar-hours-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 5 6 8 9 5"/></svg>' +
+      '</button>' +
+      '<div id="top-bar-hours-panel" class="top-bar-hours-panel" hidden>' +
+        '<div class="hours-heading">Shop Hours</div>' +
+        '<div class="hours-row"><strong>Mon &ndash; Thu</strong><span>7:30 AM &ndash; 5:00 PM</span></div>' +
+        '<div class="hours-row"><strong>Friday</strong><span>7:30 AM &ndash; 6:00 PM</span></div>' +
+        '<div class="hours-row"><strong>Sat &ndash; Sun</strong><span>Closed</span></div>' +
+        '<div class="hours-note">Online photo estimates 24/7</div>' +
+      '</div>';
+    left.replaceWith(actions);
+
+    const hoursBtn = actions.querySelector('.top-bar-hours-toggle');
+    const hoursPanel = actions.querySelector('#top-bar-hours-panel');
+    const closeHours = () => {
+      hoursPanel.setAttribute('hidden', '');
+      hoursBtn.setAttribute('aria-expanded', 'false');
+    };
+    hoursBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (hoursPanel.hasAttribute('hidden')) {
+        hoursPanel.removeAttribute('hidden');
+        hoursBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        closeHours();
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (!actions.contains(e.target)) closeHours();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeHours();
+    });
+
+    if (right) {
+      const langLink = right.querySelector('.lang-switch');
+      if (langLink) {
+        const txt = (langLink.textContent || '').trim().toLowerCase();
+        const isOnSpanish = /english/.test(txt);
+        const label = isOnSpanish ? 'English' : 'Espa\u00F1ol';
+        langLink.innerHTML = '<span>' + label + '</span>';
+      }
+    }
+  })();
+
+  // --- CTA Cluster Enhancement: upgrade Estimate button, inject Call button ---
+  (function enhanceCtaClusters() {
+    const PHONE_HREF = 'tel:7654481100';
+    const PHONE_DISPLAY = '(765) 448-1100';
+
+    // Upgrade primary "24/7 Estimate" CTAs to extra-large
+    document.querySelectorAll('a.btn, button.btn').forEach((el) => {
+      const text = (el.textContent || '').trim();
+      const looksLikeEstimate = /24\s*\/?\s*7/i.test(text) && /estimate|photo/i.test(text);
+      const looksLikeFreeEstimate = /free.*estimate/i.test(text);
+      if ((looksLikeEstimate || looksLikeFreeEstimate) && el.classList.contains('btn-lg')) {
+        el.classList.add('btn-xl');
+      }
+    });
+
+    // Inject a Call button into CTA clusters that promote Estimate or Book Appointment
+    const clusterSelectors = ['.hero-ctas', '.header-ctas', '.mobile-nav-ctas', '.estimates-cta'];
+    const callSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>';
+
+    document.querySelectorAll(clusterSelectors.join(',')).forEach((cluster) => {
+      if (cluster.querySelector('[data-call-btn]')) return;
+      const buttons = cluster.querySelectorAll('a.btn, button.btn');
+      if (!buttons.length) return;
+      const hasBookOrEstimate = Array.from(buttons).some((b) => {
+        const t = (b.textContent || '').trim();
+        return /book\s*appointment|estimate|submit photos|photo estimate/i.test(t);
+      });
+      if (!hasBookOrEstimate) return;
+
+      const isHeader = cluster.classList.contains('header-ctas');
+      const sizeClass = isHeader ? ' btn-sm' : '';
+      const label = isHeader ? 'Call' : 'Call ' + PHONE_DISPLAY;
+
+      const callBtn = document.createElement('a');
+      callBtn.href = PHONE_HREF;
+      callBtn.className = 'btn btn-call' + sizeClass;
+      callBtn.setAttribute('data-call-btn', 'true');
+      callBtn.setAttribute('data-event', 'cta_call');
+      callBtn.innerHTML = callSvg + '<span>' + label + '</span>';
+      cluster.appendChild(callBtn);
+    });
+  })();
+
   // --- Mobile Navigation ---
   const mobileToggle = document.querySelector('.mobile-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
